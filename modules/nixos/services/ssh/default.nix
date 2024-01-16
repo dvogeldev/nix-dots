@@ -32,7 +32,7 @@ in {
     };
 
     home.file.".ssh/config".text = ''
-      identityfile ~/.ssh/key 
+      identityfile ~/.ssh/id_ed25519.pub 
     '';
   };
 }
