@@ -24,11 +24,9 @@ in {
 
     fonts.packages = with pkgs;
       [
-        noto-fonts
-        noto-fonts-cjk-sans
-        noto-fonts-cjk-serif
+	cantarell-fonts
         noto-fonts-emoji
-        (nerdfonts.override {fonts = ["JetBrainsMono"];})
+        (nerdfonts.override {fonts = ["JetBrainsMono" "Hasklug"];})
       ]
       ++ cfg.fonts;
   };

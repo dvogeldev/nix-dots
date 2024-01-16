@@ -13,6 +13,8 @@
   # Bootloader.
   system.boot.efi.enable = true;
 
+  suites.common.enable = true;
+
   networking.hostName = "dvpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -22,11 +24,6 @@
 
   # Enable networking
   services.connman.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Detroit";
-
-  system.locale.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -38,17 +35,11 @@
   # Enable acpid
   services.acpid.enable = true;
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.audio.enable = true;
+  # hardware.audio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.david = {
@@ -83,7 +74,7 @@
   hardware.keyd.enable = true;
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
