@@ -116,7 +116,7 @@
   };
 
   # List services that you want to enable:
-
+  services.keyd.enable = true;
 #  # Enable keyd
 #  services.keyd.enable = true;
 #  services.keyd.keyboards.default.ids = [ "*" ];
