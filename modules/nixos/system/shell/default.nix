@@ -10,7 +10,7 @@ with lib.custom; let
   cfg = config.system.shell;
 in {
   options.system.shell = with types; {
-    shell = mkOpt (enum ["nushell" "fish"]) "nushell" "What shell to use";
+    shell = mkOpt (enum ["nushell" "fish"]) "fish" "What shell to use";
   };
 
   config = {
