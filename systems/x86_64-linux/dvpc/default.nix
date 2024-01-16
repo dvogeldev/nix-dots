@@ -119,13 +119,13 @@
 
   # List services that you want to enable:
 
-  # Enable keyd
-  services.keyd.enable = true;
-  services.keyd.keyboards.default.ids = [ "*" ];
-  services.keyd.keyboards.default.settings.main = {
-    capslock = "overload(control, esc)";
-    esc = "capslock";
-  };  
+#  # Enable keyd
+#  services.keyd.enable = true;
+#  services.keyd.keyboards.default.ids = [ "*" ];
+#  services.keyd.keyboards.default.settings.main = {
+#    capslock = "overload(control, esc)";
+#    esc = "capslock";
+#  };  
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
