@@ -6,9 +6,9 @@
 }:
 with lib;
 with lib.custom; let
-  cfg = config.services.keyd;
+  cfg = config.hardware.keyd;
 in {
-  options.services.keyd = with types; {
+  options.hardware.keyd = with types; {
     enable = mkBoolOpt false "Enable keyd";
   };
 
