@@ -16,11 +16,11 @@ in {
     services.openssh = {
       enable = true;
       ports = [22];
-      PermitRootLogin = "prohibit-password";
+      # PermitRootLogin = "prohibit-password";
     };
 
     users.users = let 
-        publicKey = ""; # Enter your ssh public key
+        publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJGvp5IARt6x0bwBtdG3GU7RssDecKX9CiBSVVZ1lLdI david@dvpc";
     in
     {
       root.openssh.authorizedKeys.keys = [
@@ -32,7 +32,7 @@ in {
     };
 
     home.file.".ssh/config".text = ''
-      identityfile ~/.ssh/id_ed25519.pub 
+      identityfile ~/.ssh/key 
     '';
   };
 }
