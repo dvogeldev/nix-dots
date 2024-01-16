@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  services.keyd.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -91,10 +93,10 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   # Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -117,13 +119,13 @@
 
   # List services that you want to enable:
 
-  # Enable keyd
-  services.keyd.enable = true;
-  services.keyd.keyboards.default.ids = [ "*" ];
-  services.keyd.keyboards.default.settings.main = {
-    capslock = "overload(control, esc)";
-    esc = "capslock";
-  };  
+  # # Enable keyd
+  # services.keyd.enable = true;
+  # services.keyd.keyboards.default.ids = [ "*" ];
+  # services.keyd.keyboards.default.settings.main = {
+  #   capslock = "overload(control, esc)";
+  #   esc = "capslock";
+  # };  
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
