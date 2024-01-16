@@ -26,7 +26,7 @@ in {
       [
 	cantarell-fonts
         noto-fonts-emoji
-        (nerdfonts.override {fonts = ["JetBrainsMono" "Hasklug"];})
+        (nerdfonts.override {fonts = ["JetBrainsMono" "Hasklig"];})
       ]
       ++ cfg.fonts;
   };

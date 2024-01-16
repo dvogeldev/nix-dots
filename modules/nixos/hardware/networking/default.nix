@@ -13,6 +13,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    networking.networkmanager.enable = true;
+  #  networking.networkmanager.enable = true;
+  services.connman.enable = true;
   };
 }

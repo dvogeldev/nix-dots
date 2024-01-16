@@ -23,7 +23,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  services.connman.enable = true;
+  # services.connman.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
