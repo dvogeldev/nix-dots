@@ -12,8 +12,6 @@
 
   # Bootloader.
   system.boot.efi.enable = true;
-#  boot.loader.systemd-boot.enable = true;
-#  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "dvpc"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -63,24 +61,23 @@
   # services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+  hardware.audio.enable = true;
+  # sound.enable = true;
+  # hardware.pulseaudio.enable = false;
+  # security.rtkit.enable = true;
+  # services.pipewire = {
+  #   enable = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pulse.enable = true;
+  #   # If you want to use JACK applications, uncomment this
+  #   #jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
+  #   # use the example session manager (no others are packaged yet so this is enabled by default,
+  #   # no need to redefine it in your config for now)
+  #   #media-session.enable = true;
+  # };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.david = {
@@ -91,11 +88,6 @@
     ];
   };
 
-  # Allow unfree packages
-  # nixpkgs.config.allowUnfree = true;
-
-  # Flakes
-  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -118,13 +110,6 @@
 
   # List services that you want to enable:
   hardware.keyd.enable = true;
-#  # Enable keyd
-#  services.keyd.enable = true;
-#  services.keyd.keyboards.default.ids = [ "*" ];
-#  services.keyd.keyboards.default.settings.main = {
-#    capslock = "overload(control, esc)";
-#    esc = "capslock";
-#  };  
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
