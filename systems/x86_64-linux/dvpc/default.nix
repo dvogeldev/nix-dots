@@ -57,6 +57,7 @@
     brave
     git
     lazygit
+    fish
     neovim
     wezterm
     wget
